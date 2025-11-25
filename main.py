@@ -7,7 +7,7 @@ class WaterUsage:
         self.housing = housing
 
     def __repr__(self):
-        return f"{self.shower_time} {self.flushes} {self.sink_time} {self.housing}"
+        return f"{self.shower_time}, {self.flushes}, {self.sink_time}, {self.housing}"
 
 def shower_time_to_gallons(time: list[WaterUsage]):
 
