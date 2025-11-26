@@ -52,3 +52,12 @@ def user_greatest_water_usage(user_data: WaterUsage, dorm: str) -> bool:
         return True
     else:
         return False
+
+def user_suggestions(user_data: WaterUsage) -> str:
+    compare = user_average_water_usage(user_data)
+    if compare <= placeholder:
+        return ""
+    elif compare <= placeholder:
+        return ""
+    elif compare >= placeholder:
+        return "Cut back on shower time, and don't flush the toilet unnecessarily to reduce your water usage and help our campus reduce its water waste."
