@@ -56,7 +56,7 @@ def user_greatest_water_usage(user_data: WaterUsage, dorm: str) -> bool:
 def user_suggestions(user_data: WaterUsage) -> str:
     compare = user_average_water_usage(user_data)
     if compare <= placeholder:
-        return ""
+        return "Good Work maintaining low water consumption, keep up what you are doing to help water conservation efforts!"
     elif compare <= placeholder:
         return ""
     elif compare >= placeholder:
