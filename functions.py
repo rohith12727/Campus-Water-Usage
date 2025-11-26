@@ -60,4 +60,4 @@ def user_suggestions(user_data: WaterUsage) -> str:
     elif compare <= placeholder:
         return ""
     elif compare >= placeholder:
-        return "Cut back on shower time, and don't flush the toilet unnecessarily to reduce your water usage and help our campus reduce its water waste."
+        return "Cut back on shower time, don't flush the toilet unnecessarily, and turn off the sink when you aren't using it to reduce your water usage and help our campus reduce its water waste."
