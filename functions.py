@@ -4,15 +4,15 @@ import data
 Housing_average_dictionary = {"PCV": 0, "RED BRICKS": 0, "NORTH MOUNTAIN": 0, "YAKITUTU": 0, "CERRO VISTA": 0, "SIERRA MADRE / YOSEMITE": 0}
 
 def shower_water_conversion(minutes: float) -> float:
-    gallons = minutes * 2.5
+    gallons = round(minutes * 2.5, 3)
     return gallons
 
-def shower_sink_conversion(minutes: float) -> float:
-    gallons = minutes * 2.2
+def sink_water_conversion(minutes: float) -> float:
+    gallons = round(minutes * 2.2, 3)
     return gallons
 
-def shower_flushes_conversion(flushes: float) -> float:
-    gallons = flushes * 1.6
+def flushes_water_conversion(flushes: float) -> float:
+    gallons = round(flushes * 1.6, 3)
     return gallons
 
 def general_average_water_usage(water: list[WaterUsage], dorm:str) -> float:
@@ -21,18 +21,21 @@ def general_average_water_usage(water: list[WaterUsage], dorm:str) -> float:
     for i in range(0, len(water)):
         if water[i].housing == dorm:
             shower_gallons = shower_water_conversion(water[i].shower_time)
-            sink_gallons = shower_sink_conversion(water[i].sink_time)
-            flush_gallons = shower_flushes_conversion(water[i].flushes)
+            sink_gallons = sink_water_conversion(water[i].sink_time)
+            flush_gallons = shower_water_conversion(water[i].flushes)
             total_gallons += shower_gallons + sink_gallons + flush_gallons
             total_dorms += 1
     average_gallons = total_gallons / total_dorms
     return average_gallons
 
+def add_to_dictionary(dictionary: dict, key: str, value: str) -> dict:
+  ...
+
 def user_average_water_usage(water: WaterUsage) -> float:
     average_gallons = 0
     shower_gallons = shower_water_conversion(water.shower_time)
-    sink_gallons = shower_sink_conversion(water.sink_time)
-    flush_gallons = shower_flushes_conversion(water.flushes)
+    sink_gallons = shower_water_conversion(water.sink_time)
+    flush_gallons = flushes_water_conversion(water.flushes)
     average_gallons += shower_gallons + sink_gallons + flush_gallons
     return average_gallons
 
