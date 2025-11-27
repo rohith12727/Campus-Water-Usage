@@ -11,8 +11,8 @@ def shower_sink_conversion(minutes: float) -> float:
     gallons = minutes * 2.2
     return gallons
 
-def shower_flushes_conversion(minutes: float) -> float:
-    gallons = minutes * 1.6
+def shower_flushes_conversion(flushes: float) -> float:
+    gallons = flushes * 1.6
     return gallons
 
 def general_average_water_usage(water: list[WaterUsage], dorm:str) -> float:
@@ -55,9 +55,9 @@ def user_greatest_water_usage(user_data: WaterUsage, dorm: str) -> bool:
 
 def user_suggestions(user_data: WaterUsage) -> str:
     compare = user_average_water_usage(user_data)
-    if compare <= placeholder:
+    if compare <= 40:
         return "Good Work maintaining low water consumption, keep up what you are doing to help water conservation efforts!"
-    elif compare <= placeholder:
-        return ""
-    elif compare >= placeholder:
+    elif compare <= 75:
+        return "Good start, but you should still reduce your water usage by being more conscious of how much you use."
+    else:
         return "Cut back on shower time, don't flush the toilet unnecessarily, and turn off the sink when you aren't using it to reduce your water usage and help our campus reduce its water waste."
