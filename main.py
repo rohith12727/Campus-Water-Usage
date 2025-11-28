@@ -1,6 +1,7 @@
 from classes import WaterUsage
 import functions
 
+#program for user interaction
 def main():
     user_shower_data = input("How many minutes do you spend showering per day?")
     user_flush_data = input("How many times do you spend flush per day?")
