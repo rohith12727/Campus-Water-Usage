@@ -14,5 +14,7 @@ def main():
 
     print(functions.user_suggestions(user_data))
 
+#NEED TO SET UP DICTIONARY TO COMPARE USER TO DORMS
+
 if __name__ == "__main__":
     main()
