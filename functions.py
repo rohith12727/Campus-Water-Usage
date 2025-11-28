@@ -34,7 +34,7 @@ def add_to_dictionary(dictionary: dict, key: str, value: str) -> dict:
 def user_average_water_usage(water: WaterUsage) -> float:
     average_gallons = 0
     shower_gallons = shower_water_conversion(water.shower_time)
-    sink_gallons = shower_water_conversion(water.sink_time)
+    sink_gallons = sink_water_conversion(water.sink_time)
     flush_gallons = flushes_water_conversion(water.flushes)
     average_gallons += shower_gallons + sink_gallons + flush_gallons
     return average_gallons

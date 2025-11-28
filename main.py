@@ -1,5 +1,5 @@
 from classes import WaterUsage
-
+import functions
 
 def main():
     user_shower_data = input("How many minutes do you spend showering per day?")
@@ -9,7 +9,9 @@ def main():
 
     user_data = WaterUsage(int(user_shower_data), int(user_flush_data), int(user_sink_data), user_dorm_data)
 
+    print(functions.user_average_water_usage(user_data))
 
+    print(functions.user_suggestions(user_data))
 
 if __name__ == "__main__":
     main()
