@@ -1,4 +1,4 @@
-from main import WaterUsage
+from classes import WaterUsage
 import data
 
 Housing_average_dictionary = {"PCV": 0, "RED BRICKS": 0, "NORTH MOUNTAIN": 0, "YAKITUTU": 0, "CERRO VISTA": 0, "SIERRA MADRE / YOSEMITE": 0}

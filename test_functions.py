@@ -1,7 +1,6 @@
 import functions
 import unittest
-import main
-from main import WaterUsage
+from classes import WaterUsage
 
 class TestCases(unittest.TestCase):
 
