@@ -1,7 +1,7 @@
 from classes import WaterUsage
 import data
 
-Housing_average_dictionary = {"PCV": 0, "RED BRICKS": 0, "NORTH MOUNTAIN": 0, "YAKITUTU": 0, "CERRO VISTA": 0, "SIERRA MADRE / YOSEMITE": 0}
+Housing_average_dictionary = {"PCV": 0, "RED BRICKS": 0, "NORTH MOUNTAIN": 0, "YAKITUTU": 0, "CERRO VISTA": 0, "SIERRA MADRE": 0}
 
 def shower_water_conversion(minutes: float) -> float:
     gallons = round(minutes * 2.5, 3)
@@ -33,8 +33,7 @@ def add_to_dictionary(dictionary: dict, key: str, value: float) -> dict:
     return dictionary
 
 def build_housing_averages(water_list: list[WaterUsage]) -> None:
-    dorms = ["PCV", "RED BRICKS", "NORTH MOUNTAIN", "YAKITITU", "CERRO VISTA", "SIERRA MADRE"]
-    for dorm in dorms:
+    for dorm in Housing_average_dictionary.keys():
         avg = general_average_water_usage(water_list, dorm)
         add_to_dictionary(Housing_average_dictionary, dorm, avg)
 

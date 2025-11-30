@@ -1,8 +1,11 @@
 from classes import WaterUsage
 import functions
+import data
 
 #program for user interaction
 def main():
+    functions.build_housing_averages(data.data)
+
     user_shower_data = input("About how many minutes do you spend showering per day?")
     user_flush_data = input("About how many times do you flush a toilet per day?")
     user_sink_data = input("About how many minutes do leave the sink on for per day?")
