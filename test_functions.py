@@ -44,17 +44,17 @@ class TestCases(unittest.TestCase):
     def test_general_average_water_usage(self):
         input_element1 = [
             WaterUsage(45, 5, 10, "PCV"),
-            WaterUsage(30, 4, 5, "Red Bricks"),
-            WaterUsage(20, 3, 10, "North Mountain"),
-            WaterUsage(15, 6, 15, "yakʔitʸutʸu"),
-            WaterUsage(20, 4, 15, "Sierra Madre"),
-            WaterUsage(45, 5, 30, "Cerro Vista"),
+            WaterUsage(30, 4, 5, "RED BRICKS"),
+            WaterUsage(20, 3, 10, "NORTH MOUNTAIN"),
+            WaterUsage(15, 6, 15, "YAKITITU"),
+            WaterUsage(20, 4, 15, "SIERRA MADRE"),
+            WaterUsage(45, 5, 30, "CERRO VISTA"),
             WaterUsage(30, 4, 30, "PCV"),
-            WaterUsage(10, 3, 5, "Red Bricks"),
-            WaterUsage(20, 6, 10, "North Mountain"),
-            WaterUsage(18, 3, 7, "yakʔitʸutʸu"),
-            WaterUsage(25, 5, 20, "Cerro Vista"),
-            WaterUsage(15, 4, 20, "Sierra Madre")
+            WaterUsage(10, 3, 5, "RED BRICKS"),
+            WaterUsage(20, 6, 10, "NORTH MOUNTAIN"),
+            WaterUsage(18, 3, 7, "YAKITITU"),
+            WaterUsage(25, 5, 20, "CERRO VISTA"),
+            WaterUsage(15, 4, 20, "SIERRA MADRE")
             ]
         input_element2 = "PCV"
         expected = 149.0
@@ -64,17 +64,17 @@ class TestCases(unittest.TestCase):
     def test_general_average_water_usage2(self):
         input_element1 = [
             WaterUsage(45, 5, 10, "PCV"),
-            WaterUsage(30, 4, 5, "Red Bricks"),
-            WaterUsage(20, 3, 10, "North Mountain"),
-            WaterUsage(15, 6, 15, "yakʔitʸutʸu"),
-            WaterUsage(20, 4, 15, "Sierra Madre"),
-            WaterUsage(45, 5, 30, "Cerro Vista"),
+            WaterUsage(30, 4, 5, "RED BRICKS"),
+            WaterUsage(20, 3, 10, "NORTH MOUNTAIN"),
+            WaterUsage(15, 6, 15, "YAKITITU"),
+            WaterUsage(20, 4, 15, "SIERRA MADRE"),
+            WaterUsage(45, 5, 30, "CERRO VISTA"),
             WaterUsage(30, 4, 30, "PCV"),
-            WaterUsage(10, 3, 5, "Red Bricks"),
-            WaterUsage(20, 6, 10, "North Mountain"),
-            WaterUsage(18, 3, 7, "yakʔitʸutʸu"),
-            WaterUsage(25, 5, 20, "Cerro Vista"),
-            WaterUsage(15, 4, 20, "Sierra Madre")
+            WaterUsage(10, 3, 5, "RED BRICKS"),
+            WaterUsage(20, 6, 10, "NORTH MOUNTAIN"),
+            WaterUsage(18, 3, 7, "YAKITITU"),
+            WaterUsage(25, 5, 20, "CERRO VISTA"),
+            WaterUsage(15, 4, 20, "SIERRA MADRE")
             ]
         input_element2 = "Red Bricks"
         expected = 69.75
