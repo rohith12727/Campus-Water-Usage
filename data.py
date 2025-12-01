@@ -12,7 +12,9 @@ data = [
     WaterUsage(20, 6, 10, "NORTH MOUNTAIN"),
     WaterUsage(18, 3, 7, "YAKITUTU"),
     WaterUsage(25, 5, 20, "CERRO VISTA"),
-    WaterUsage(15, 4, 20, "SIERRA MADRE")
+    WaterUsage(15, 4, 20, "SIERRA MADRE"),
+    WaterUsage(6, 3, 7, "NORTH MOUNTAIN"),
+    WaterUsage(15, 4, 7, "PCV")
 ]
 
 

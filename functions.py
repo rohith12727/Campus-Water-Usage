@@ -67,6 +67,6 @@ def user_suggestions(user_data: WaterUsage) -> str:
     if compare <= 60:
         return "Good Work maintaining low water consumption, keep up what you are doing to help water conservation efforts!"
     elif compare <= 80:
-        return "Good start, but you should still reduce your water usage by being more conscious of how much you use."
+        return "Good start on conservation, but you should still reduce your water usage by being more conscious of how much you use."
     else:
         return "Cut back on shower time, don't flush the toilet unnecessarily, and turn off the sink when you aren't using it to reduce your water usage and help our campus reduce its water waste."
