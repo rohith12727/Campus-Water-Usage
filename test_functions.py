@@ -2,6 +2,8 @@ import functions
 import unittest
 from classes import WaterUsage
 
+housing_average_dictionary = {"PCV": 149.0, "RED BRICKS": 69.75, "NORTH MOUNTAIN": 79.2, "YAKITUTU": 72.65, "CERRO VISTA": 150.5, "SIERRA MADRE": 88.65}
+test_dictionary = {"PCV": 0, "RED BRICKS": 0, "NORTH MOUNTAIN": 0, "YAKITUTU": 0, "CERRO VISTA": 0, "SIERRA MADRE": 0}
 class TestCases(unittest.TestCase):
 
 #test_shower_water_conversion
@@ -80,6 +82,68 @@ class TestCases(unittest.TestCase):
         expected = 69.75
         result = functions.general_average_water_usage(input_element1, input_element2)
         self.assertEqual(expected, result)
+
+    def test_add_to_dictionary(self):
+        input = test_dictionary
+        result = functions.add_to_dictionary(input, "PCV", 80.0)
+        expected = {"PCV": 80.0, "RED BRICKS": 0, "NORTH MOUNTAIN": 0, "YAKITUTU": 0, "CERRO VISTA": 0, "SIERRA MADRE": 0}
+        self.assertEqual(expected, result)
+
+    def test_add_to_dictionary_2(self):
+        input = test_dictionary
+        result = functions.add_to_dictionary(input, "NORTH MOUNTAIN", 78.0)
+        expected = {"PCV": 0, "RED BRICKS": 0, "NORTH MOUNTAIN": 78.0, "YAKITUTU": 0, "CERRO VISTA": 0, "SIERRA MADRE": 0}
+        self.assertEqual(expected, result)
+
+    def test_user_average_water_usage(self):
+        input = WaterUsage(9, 3, 10, "PCV")
+        result = functions.user_average_water_usage(input)
+        expected = 49.3
+        self.assertEqual(expected, result)
+
+    def test_user_average_water_usage2(self):
+        input = WaterUsage(40, 3, 15, "RED BRICKS")
+        result = functions.user_average_water_usage(input)
+        expected = 137.8
+        self.assertEqual(expected, result)
+
+    def test_general_greatest_water_usage(self):
+        input = housing_average_dictionary
+        result = functions.general_greatest_water_usage(input)
+        expected = "CERRO VISTA"
+        self.assertEqual(expected, result)
+
+    def test_general_greatest_water_usage2(self):
+        input = {"PCV": 149.0, "RED BRICKS": 69.75, "NORTH MOUNTAIN": 179.2, "YAKITUTU": 72.65, "CERRO VISTA": 150.5, "SIERRA MADRE": 88.65}
+        result = functions.general_greatest_water_usage(input)
+        expected = "NORTH MOUNTAIN"
+        self.assertEqual(expected, result)
+
+    def test_user_greatest_water_usage(self):
+        input = WaterUsage(9, 3, 10, "PCV")
+        result = functions.user_greatest_water_usage(input, "PCV")
+        expected = True
+        self.assertEqual(expected, result)
+
+    def test_user_greatest_water_usage2(self):
+        input = WaterUsage(0, 0, 0, "RED BRICKS")
+        result = functions.user_greatest_water_usage(input, "RED BRICKS")
+        expected = False
+        self.assertEqual(expected, result)
+
+    def test_user_suggestions(self):
+        input = WaterUsage(9, 3, 10, "RED BRICKS")
+        result = functions.user_suggestions(input)
+        expected = "Good Work maintaining low water consumption, keep up what you are doing to help water conservation efforts!"
+        self.assertEqual(expected, result)
+
+    def test_user_suggestions2(self):
+        input = WaterUsage(23, 3, 50, "RED BRICKS")
+        result = functions.user_suggestions(input)
+        expected = "Cut back on shower time, don't flush the toilet unnecessarily, and turn off the sink when you aren't using it to reduce your water usage and help our campus reduce its water waste."
+        self.assertEqual(expected, result)
+
+
 
 
 if __name__ == '__main__':

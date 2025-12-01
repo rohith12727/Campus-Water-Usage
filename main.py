@@ -3,6 +3,26 @@ import functions
 import data
 from functions import Housing_average_dictionary
 
+#Purpose: Asks the user for inputs on their water usage, including shower minutes, toilet flushes, sink minutes, and dorm name.
+#Then turns these inputs into a WaterUsage data, and runs functions to show average water usage across dorms, compare the users water usage against the average of their dorm, and give recommendations on decreasing water usage.
+#Input Type: Nothing
+#Output Type: Nothing, text appears in console
+#Example input: 9, 3, 10, PCV
+#Example Output:
+#Your average daily water usage: 49.3 Gallons
+#The average daily water usage of PCV is 144.95 Gallons
+#The average daily water usage of RED BRICKS is 66.6 Gallons
+#The average daily water usage of NORTH MOUNTAIN is 79.19999999999999 Gallons
+#The average daily water usage of YAKITUTU is 72.65 Gallons
+#The average daily water usage of CERRO VISTA is 150.5 Gallons
+#The average daily water usage of SIERRA MADRE is 88.65 Gallons
+#You use LESS water than the average resident in PCV
+#Good Work maintaining low water consumption, keep up what you are doing to help water conservation efforts!
+#Structure: Store user inputs (received through input function/questions) in variables, then store data in WaterUsage object
+#Run the user_data through the user_average_water_usage function and return user average water usage in gallons in a day.
+#Print each dorms water usage average after running it through the build_housing_averages function and cycling through each dorm.
+#Use user_greatest_water_usage function to compare user water usage against their dorm, and return string showing their water usage is either greater or lower (if statement) than their dorm average.
+#Print recommendations based off of user_suggestions function.
 def main():
     functions.build_housing_averages(data.data)
 
