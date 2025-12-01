@@ -1,8 +1,8 @@
 from classes import WaterUsage
 import functions
 import data
+from functions import Housing_average_dictionary
 
-#program for user interaction
 def main():
     functions.build_housing_averages(data.data)
 
@@ -14,6 +14,9 @@ def main():
     user_data = WaterUsage(int(user_shower_data), int(user_flush_data), int(user_sink_data), user_dorm_data.upper())
 
     print("Your average daily water usage:", functions.user_average_water_usage(user_data), "Gallons")
+    for dorm in Housing_average_dictionary:
+        name = Housing_average_dictionary[dorm]
+        print("The average daily water usage of", dorm,"is", name, "Gallons")
 
     if functions.user_greatest_water_usage(user_data, user_dorm_data.upper()):
         print("You use MORE water than the average resident in", user_dorm_data)
@@ -21,7 +24,6 @@ def main():
         print("You use LESS water than the average resident in", user_dorm_data)
 
     print(functions.user_suggestions(user_data))
-
 
 if __name__ == "__main__":
     main()
