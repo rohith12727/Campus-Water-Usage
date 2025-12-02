@@ -27,7 +27,6 @@ def get_number_input(prompt):
     while True:
         value = input(prompt)
         try:
-            # Try converting to float (allows decimals)
             return float(value)
         except ValueError:
             print("Please enter a valid number.\n")
@@ -36,7 +35,6 @@ def get_number_input(prompt):
 def main():
     functions.build_housing_averages(data.data)
 
-    # Use the function for each question
     user_shower_data = get_number_input("About how many minutes do you spend showering per day? ")
     user_flush_data = get_number_input("About how many times do you flush a toilet per day? ")
     user_sink_data = get_number_input("About how many minutes do you leave the sink on per day? ")
