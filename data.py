@@ -1,5 +1,5 @@
 from classes import WaterUsage
-#will add more later
+
 data = [
     WaterUsage(45, 5, 10, "PCV"),
     WaterUsage(30, 4, 5, "RED BRICKS"),
@@ -14,7 +14,10 @@ data = [
     WaterUsage(25, 5, 20, "CERRO VISTA"),
     WaterUsage(15, 4, 20, "SIERRA MADRE"),
     WaterUsage(6, 3, 7, "NORTH MOUNTAIN"),
-    WaterUsage(15, 4, 7, "PCV")
+    WaterUsage(15, 4, 7, "PCV"),
+    WaterUsage(20, 3, 3, "RED BRICKS"),
+    WaterUsage(20, 4, 8, "PCV"),
+    WaterUsage(15, 4, 10, "North Mountain")
 ]
 
 

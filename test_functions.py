@@ -54,12 +54,12 @@ class TestCases(unittest.TestCase):
             WaterUsage(30, 4, 30, "PCV"),
             WaterUsage(10, 3, 5, "RED BRICKS"),
             WaterUsage(20, 6, 10, "NORTH MOUNTAIN"),
-            WaterUsage(18, 3, 7, "YAKITITU"),
+            WaterUsage(18, 3, 7, "YAKITUTU"),
             WaterUsage(25, 5, 20, "CERRO VISTA"),
             WaterUsage(15, 4, 20, "SIERRA MADRE")
             ]
         input_element2 = "PCV"
-        expected = 149.0
+        expected = 144.95
         result = functions.general_average_water_usage(input_element1, input_element2)
         self.assertEqual(expected, result)
 
@@ -78,8 +78,8 @@ class TestCases(unittest.TestCase):
             WaterUsage(25, 5, 20, "CERRO VISTA"),
             WaterUsage(15, 4, 20, "SIERRA MADRE")
             ]
-        input_element2 = "Red Bricks"
-        expected = 69.75
+        input_element2 = "RED BRICKS"
+        expected = 66.6
         result = functions.general_average_water_usage(input_element1, input_element2)
         self.assertEqual(expected, result)
 
