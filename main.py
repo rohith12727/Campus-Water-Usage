@@ -46,15 +46,15 @@ def main():
         user_dorm_data = input("What housing do you live in? (PCV, Red Bricks, North Mountain, Yakitutu, Cerro Vista, Sierra Madre): ").upper()
     user_data = WaterUsage(int(user_shower_data), int(user_flush_data), int(user_sink_data), user_dorm_data.upper())
 
-    print("Your average daily water usage:", functions.user_average_water_usage(user_data), "Gallons")
+    print("\nYour average daily water usage:", functions.user_average_water_usage(user_data), "Gallons")
     for dorm in Housing_average_dictionary:
         name = Housing_average_dictionary[dorm]
         print("The average daily water usage of", dorm,"is", name, "Gallons")
 
     if functions.user_greatest_water_usage(user_data, user_dorm_data.upper()):
-        print("You use MORE water than the average resident in", user_dorm_data)
+        print("\nYou use MORE water than the average resident in", user_dorm_data)
     else:
-        print("You use LESS water than the average resident in", user_dorm_data)
+        print("\nYou use LESS water than the average resident in", user_dorm_data)
 
     print(functions.user_suggestions(user_data))
 
