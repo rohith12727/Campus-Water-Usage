@@ -9,5 +9,3 @@ class WaterUsage:
     def __repr__(self):
         return "Your shower usage is {} minutes, your sink usage is {} minutes, your toilet flushes number {}, and you live in {} housing.".format(self.shower_time, self.sink_time, self.flushes, self.housing)
 
-
-

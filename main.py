@@ -18,7 +18,7 @@ from functions import Housing_average_dictionary
 #The average daily water usage of SIERRA MADRE is 88.65 Gallons
 #You use LESS water than the average resident in PCV
 #Good Work maintaining low water consumption, keep up what you are doing to help water conservation efforts!
-#Structure: Store user inputs (received through input function/questions) in variables, then store data in WaterUsage object
+#Structure: Store user inputs (received through input function/questions) in variables, then store data in WaterUsage object`
 #Run the user_data through the user_average_water_usage function and return user average water usage in gallons in a day.
 #Print each dorms water usage average after running it through the build_housing_averages function and cycling through each dorm.
 #Use user_greatest_water_usage function to compare user water usage against their dorm, and return string showing their water usage is either greater or lower (if statement) than their dorm average.

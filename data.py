@@ -17,7 +17,7 @@ data = [
     WaterUsage(15, 4, 7, "PCV"),
     WaterUsage(20, 3, 3, "RED BRICKS"),
     WaterUsage(20, 4, 8, "PCV"),
-    WaterUsage(15, 4, 10, "North Mountain")
+    WaterUsage(15, 4, 10, "NORTH MOUNTAIN")
 ]
 
 
