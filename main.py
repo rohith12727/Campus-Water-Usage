@@ -23,12 +23,24 @@ from functions import Housing_average_dictionary
 #Print each dorms water usage average after running it through the build_housing_averages function and cycling through each dorm.
 #Use user_greatest_water_usage function to compare user water usage against their dorm, and return string showing their water usage is either greater or lower (if statement) than their dorm average.
 #Print recommendations based off of user_suggestions function.
+def get_number_input(prompt):
+    while True:
+        value = input(prompt)
+        try:
+            # Try converting to float (allows decimals)
+            return float(value)
+        except ValueError:
+            print("Please enter a valid number.\n")
+
+
 def main():
     functions.build_housing_averages(data.data)
 
-    user_shower_data = input("About how many minutes do you spend showering per day?")
-    user_flush_data = input("About how many times do you flush a toilet per day?")
-    user_sink_data = input("About how many minutes do leave the sink on for per day?")
+    # Use the function for each question
+    user_shower_data = get_number_input("About how many minutes do you spend showering per day? ")
+    user_flush_data = get_number_input("About how many times do you flush a toilet per day? ")
+    user_sink_data = get_number_input("About how many minutes do you leave the sink on per day? ")
+
     valid_dorms = {"PCV", "RED BRICKS", "NORTH MOUNTAIN", "YAKITUTU", "CERRO VISTA", "SIERRA MADRE"}
 
     user_dorm_data = ""
